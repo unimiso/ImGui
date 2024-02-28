@@ -192,11 +192,11 @@ Index of this file:
 static void ShowExampleAppMainMenuBar();
 static void ShowExampleAppConsole(bool* p_open);
 static void ShowExampleAppCustomRendering(bool* p_open);
-static void ShowExampleAppDockSpace(bool* p_open);
+void ShowExampleAppDockSpace(bool* p_open);
 static void ShowExampleAppDocuments(bool* p_open);
-static void ShowExampleAppLog(bool* p_open);
+void ShowExampleAppLog(bool* p_open);
 static void ShowExampleAppLayout(bool* p_open);
-static void ShowExampleAppPropertyEditor(bool* p_open);
+void ShowExampleAppPropertyEditor(bool* p_open);
 static void ShowExampleAppSimpleOverlay(bool* p_open);
 static void ShowExampleAppAutoResize(bool* p_open);
 static void ShowExampleAppConstrainedResize(bool* p_open);
@@ -7563,7 +7563,7 @@ struct ExampleAppLog
 };
 
 // Demonstrate creating a simple log window with basic filtering.
-static void ShowExampleAppLog(bool* p_open)
+void ShowExampleAppLog(bool* p_open)
 {
     static ExampleAppLog log;
 
@@ -7713,7 +7713,7 @@ static void ShowPlaceholderObject(const char* prefix, int uid)
 
 // Demonstrate create a simple property editor.
 // This demo is a bit lackluster nowadays, would be nice to improve.
-static void ShowExampleAppPropertyEditor(bool* p_open)
+void ShowExampleAppPropertyEditor(bool* p_open)
 {
     ImGui::SetNextWindowSize(ImVec2(430, 450), ImGuiCond_FirstUseEver);
     if (!ImGui::Begin("Example: Property editor", p_open))
