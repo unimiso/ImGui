@@ -191,7 +191,7 @@ Index of this file:
 // Forward Declarations
 static void ShowExampleAppMainMenuBar();
 static void ShowExampleAppConsole(bool* p_open);
-static void ShowExampleAppCustomRendering(bool* p_open);
+void ShowExampleAppCustomRendering(bool* p_open);
 void ShowExampleAppDockSpace(bool* p_open);
 static void ShowExampleAppDocuments(bool* p_open);
 void ShowExampleAppLog(bool* p_open);
@@ -8068,7 +8068,7 @@ static void ShowExampleAppWindowTitles(bool*)
 //-----------------------------------------------------------------------------
 
 // Demonstrate using the low-level ImDrawList to draw custom shapes.
-static void ShowExampleAppCustomRendering(bool* p_open)
+void ShowExampleAppCustomRendering(bool* p_open)
 {
     if (!ImGui::Begin("Example: Custom rendering", p_open))
     {
